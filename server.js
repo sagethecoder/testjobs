@@ -5,7 +5,7 @@ require("dotenv").config();
 // const taskRoutes = require("./routes/tasksRoutes");
 // const { errorHandler } = require("./middlewares");
 const cronJobs = require("./jobs/cronJobs");
-const {processBirthdays} =require('./jobs/cronJobs')
+const { processBirthdays } = require("./jobs/cronJobs");
 const connectDB = require("./db");
 
 const port = process.env.PORT || 8000;
@@ -19,14 +19,16 @@ app.use(cors());
 
 app.get("/", (req, res) => {
   res.json("Jai Mata Di");
-  processBirthdays()
-  // cronJobs
 });
 
+app.get("/happy-birthday", (req, res) => {
+  processBirthdays();
+  res.json("Hello");
+});
 
-app.listen(port, ()=>{
+app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
-})
+});
 
 // connectDB()
 //   .then((res) => {
