@@ -47,13 +47,9 @@ const processBirthdays = async () => {
     }
 };
 
-<<<<<<< HEAD
 // cron.schedule('49 23 * * *', processBirthdays);
 
 
-=======
-//cron.schedule('49 23 * * *', processBirthdays);
->>>>>>> 5efb1ab84900c6418073fc070ec234fb52a5dfd7
 
 // module.exports = cron;
 module.exports = {processBirthdays}
