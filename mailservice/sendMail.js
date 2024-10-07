@@ -1,7 +1,8 @@
 const nodemailer = require("nodemailer");
 const path = require('path')
 const ejs = require('ejs')
-const templatePath = path.join(__dirname, '../views/template.ejs')
+// const templatePath = path.join(__dirname, '../views/template.ejs')
+const templatePath = path.join(__dirname, '../views/test.ejs')
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
