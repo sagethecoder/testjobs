@@ -7,8 +7,8 @@ const templatePath = path.join(__dirname, '../views/template.ejs')
 const transporter = nodemailer.createTransport({
   // service: "gmail",
   host: 'smtp.gmail.com',
-  port: 465, // or 587 for TLS
-  secure: true,
+  port: 587, // or 587 for TLS
+  // secure: true,
   auth: {
     user: process.env.APP_EMAIL,
     pass: process.env.APP_PASS
